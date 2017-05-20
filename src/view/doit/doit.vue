@@ -1,18 +1,20 @@
 <template>
-老裴，好久不见！
+	<div class="todobox">
+		{{name}}
+	</div>
 </template>
 <script type="text/javascript">
 	export default{
 		data(){
 			return{
-				
+				name:''
 			}
 		},
 		methods:{
 
 		},
 		mounted(){
-			console.log(this.$route.params)
+			this.name=this.$route.params.name
 		}
 	}
 </script>
