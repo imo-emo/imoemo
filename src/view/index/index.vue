@@ -14,7 +14,7 @@
 		},
 		methods:{
 			func(){
-				this.$router.push({name:'doit',params:{name:'smallblack'}})
+				this.$router.push({name:'list'})
 			}
 		},
 		mounted(){

@@ -1,0 +1,32 @@
+#c3{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	.container{
+		width:100%;
+		height:400px;
+		position:absolute;
+		left:0;
+		top:0;
+		p{
+			width:10px;
+			height:40px;
+			background:yellow;
+			animation:myfirst 5s;
+			transform: translate(100px,10px);
+			transition:all 1s;
+			@keyframes myfirst
+			{
+				0%   {transform: translate(500px,20px) rotate(30deg);}
+			    /*25%  {background: yellow;transform: translate(300px,40px) rotate(60deg);}
+			    50%  {background: blue;transform: translate(200px,50px) rotate(90deg);}*/
+			    100% {background: green;transform: translate(100px,10px) rotate(180deg);}
+			}
+		}
+		.pdo{
+			transform: translate(20px,20px);
+			transition:transform 2s;
+		}
+	}
+}
