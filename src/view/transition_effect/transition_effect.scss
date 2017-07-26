@@ -33,3 +33,9 @@
 		}
 	}
 }
+.fade-enter-active, .fade-leave-active{  //开始结束动画阶段
+	transition:opacity .5s;
+}
+.fade-enter, .fade-leave-to{  //fade-enter 进入初始化    fade-leave  隐藏初始化
+	opacity:0;
+}
