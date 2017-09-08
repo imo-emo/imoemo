@@ -8,6 +8,7 @@ const c3 = r =>require.ensure([],()=>r(require("../view/c3/c3.vue")),'c3')
 const list= r =>require.ensure([],()=>r(require("../view/list/list.vue")),'list');  //目录列表  
 const component= r =>require.ensure([],()=>r(require("../view/component/component.vue")),'component');  //组件模块
 const transitionEffect= r =>require.ensure([],()=>r(require('../view/transition_effect/transition_effect.vue')),'transition_effect')  //过渡效果
+const standard= r =>require.ensure([],()=>r(require('../view/standard/standard.vue')),'standard')
 
 Vue.use(Router)
 
@@ -41,6 +42,10 @@ export default new Router({
       path:'/transition_effect',
       name:'transition_effect',
       component:transitionEffect
+    },{
+      path:'/standard',
+      name:'standard',
+      component:standard
     },{
 	  path: '*',
 	  redirect: '/'

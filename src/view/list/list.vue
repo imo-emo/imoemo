@@ -5,6 +5,7 @@
 			<li @click="router_push('component')">component</li>
 			<li @click="router_push('reactive')">深入响应式原理</li>
 			<li @click="router_push('transition_effect')">过渡效果</li>
+			<li @click="router_push('standard')">前端结构规范</li>
 		</ul>
 	</div>
 </template>
@@ -12,7 +13,7 @@
 	export default{
 		data(){
 			return{
-
+				
 			}
 		},
 		methods:{
