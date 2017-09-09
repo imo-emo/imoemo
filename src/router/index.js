@@ -9,6 +9,7 @@ const list= r =>require.ensure([],()=>r(require("../view/list/list.vue")),'list'
 const component= r =>require.ensure([],()=>r(require("../view/component/component.vue")),'component');  //组件模块
 const transitionEffect= r =>require.ensure([],()=>r(require('../view/transition_effect/transition_effect.vue')),'transition_effect')  //过渡效果
 const standard= r =>require.ensure([],()=>r(require('../view/standard/standard.vue')),'standard')
+const es6 = r =>require.ensure([],()=>r(require("../view/es6/es6.vue")),'es6');
 
 Vue.use(Router)
 
@@ -46,6 +47,10 @@ export default new Router({
       path:'/standard',
       name:'standard',
       component:standard
+    },{
+      path:'/es6',
+      name:'es6',
+      component:es6
     },{
 	  path: '*',
 	  redirect: '/'
