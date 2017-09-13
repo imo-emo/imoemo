@@ -382,6 +382,50 @@
 			console.log(rest);*/
 			//下面是另外一些例子
 			//扩展运算符只能放在数组的最后面
+			//3）函数的返回值
+			//js的函数只能返回一个值，如果需要返回多个值，只能返回数组或对象，扩展运算提供了解决
+			//这个问题的一种变通办法
+			/*let date = (a,b) => [a,b];
+			console.log(date(1,2))*/
+			//4)字符串
+			//扩展运算符还可以将字符串转为真正的数组
+			//console.log([...'Hello']);
+			//5)Map和set结构，Generator函数
+			//扩展运算符内部调用的是数据结构的Iterator接口，因此只要具有Iterator接口的对象，都可以
+			//使用拓展运算符，比如Map结构
+			/*let map = new Map([
+				[1,'one'],
+				[2,'two'],
+				[3,'three']
+			])
+			let arr=[...map.keys()];
+			console.log(arr);*/
+			//如果没有Interator接口，扩展运算符会报错
+			//2.Array.from()
+			//Array.from 方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）和可遍历
+			//的对象（包括es6新增的数据结构Set 和 Map）
+			//下面是一个类似数组的对象，Array.from 将它转为真正的数组：类似数组的对象（array-like-object）和可遍历
+			//(iterable)的对象（包括es6新增的数据结构Set和Map）。
+			//下面是一个类似数组的对象，array.from能将它转为真正的数组
+			/*let arrayLike = {
+				'0':'a',
+				'1':'b',
+				'2':'c',
+				length:3
+			}
+			let arr = Array.from(arrayLike);
+			console.log(arr)*/
+			//实际应用中，常见的类似数组的对象是Dom操作返回的Nodelist集合，以及函数内部的arguments对象。Array.from都可以
+			//将他们转为真正的数组
+			//3.Array.of() 用于将一组值，转换为数组
+			//console.log(Array.of(3,11,8));
+			//这个方法的主要目的，是弥补数组构造函数Array()	的不足，因为参数个数的不同,会导致Array()的行为有差异.
+			//array.of基本上可以用来代替Array()或者new Array(),并且不存在由于参数不同而导致的重载，它的行为非常统一。
+			//Array.of();   Array.of(undefined)  
+			//console.log(Array.of(1));
+			//console.log(Array.of(1,2));
+			//Array.of总是返回参数值组成的数组，如果没有参数，就返回一个空数组。
+			//4.数组实例的copyWithin()
 		}
 	}
 </script>
