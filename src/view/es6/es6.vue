@@ -304,7 +304,84 @@
 			//2.不可用当做构造函数，也就是说，不可以使用new命令，否则会报错
 			//3.不可以使用arguments对象，该函数在函数体内不存在。如果要用，可以使用rest参数替代
 			//4.不可以使用yield命令，因此箭头函数不能用作Generator函数
-			
+			/*const Rou = (...values) =>{
+				let sum='';
+				values.forEach((item)=>{
+					sum+=item;
+				})
+				return sum
+			}
+			let Result=Rou('name ','pasagement ','business')
+			console.log(Result);
+			this.axios({
+				url:'路径',
+				method:'post/get',
+				data/params:{
+					//参数
+				}
+			}).then((res)=>{
+				console.log(res)
+			})*/
+			//数组的拓展
+			//1.拓展运算符   是...  好比rest参数的逆运算一样，将一个数组转为用逗号分隔的参数序列
+			/*console.log(...[1,2,3])*/
+			//console.log(1,...[2,3,4],5)
+			//该运算符主要用于函数调用
+			/*const add = (x,y) => x+y;
+			let numbers=[4,38];
+			console.log(add(...numbers))
+			let arr=[];
+			const push = (array,...items)=>{
+				array.push(...items);
+				return array;
+			}
+			console.log(push(arr,1,2,3,4,5));*/
+			//拓展运算符与正常的函数参数可以结合使用，非常灵活
+			/*const f = (v,w,x,y,z) => {console.log(v,w,x,y,z)}
+			var args=[0,1];
+			f(-1,...args,2,...[3])*/
+			//拓展运算符后面还可以放置表达式
+			/*let x=1;
+			const arr=[
+				...(x>0?['a','c']:[]),
+				'b'
+			]
+			console.log(arr);*/
+			//如果拓展运算符后面是一个空数组，则不产生任何效果
+			//console.log([...[],1])
+			//替代数组的apply方法
+			//由于扩展运算符可以展开数组，所以不在需要apply方法，将数组转为函数的参数了
+			/*const f = (x,y,z) => {
+				console.log(x)
+				console.log(y)
+				console.log(z)
+			}
+			let args = [0,1,2];
+			f(...args);*/
+			//下面是扩展运算符取代apply方法的一个实际的例子，应用Math.max方法，简化求出一个数组最大元素的写法
+			/*Math.max(...[14,3,7])*/
+			//以上代码中由于js不提供求数组的最大元素的函数，所以只能套用Math.max函数，将数组转为一个参数序列，
+			//然后求最大值。有了扩展运算符以后，就可以直接用Math.max了
+			//另一个例子是通过push函数，将一个数组添加到另一个数组的尾部。
+			/*let arr1=[0,1,2];
+			let arr2=[3,4,5];
+			arr1.push(...arr2);
+			console.log(arr1);*/
+			//console.log(new Date(...[2017,1,1]));
+			//拓展运算符的应用
+			//1）合并数组
+			//扩展运算符提供了数组合并的新写法。
+			/*let more=[0,1,2,3,4,5];
+			console.log([1,2].concat(more));
+			console.log([1,2,...more])*/
+			//2)与结构赋值结合
+			//扩展运算符可以与结构赋值结合起来，用于生成数组
+			/*let list=[0,1,2,3,4,5,6];
+			let [a,...rest] = list;
+			console.log(a)
+			console.log(rest);*/
+			//下面是另外一些例子
+			//扩展运算符只能放在数组的最后面
 		}
 	}
 </script>
