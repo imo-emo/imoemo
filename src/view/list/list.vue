@@ -7,6 +7,7 @@
 			<li @click="router_push('transition_effect')">过渡效果</li>
 			<li @click="router_push('standard')">前端结构规范</li>
 			<li @click="router_push('es6')">es6</li>
+			<li @click="router_push('better_scroll')">better-scroll</li>
 		</ul>
 	</div>
 </template>

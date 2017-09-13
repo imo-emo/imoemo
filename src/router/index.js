@@ -10,6 +10,7 @@ const component= r =>require.ensure([],()=>r(require("../view/component/componen
 const transitionEffect= r =>require.ensure([],()=>r(require('../view/transition_effect/transition_effect.vue')),'transition_effect')  //过渡效果
 const standard= r =>require.ensure([],()=>r(require('../view/standard/standard.vue')),'standard')
 const es6 = r =>require.ensure([],()=>r(require("../view/es6/es6.vue")),'es6');
+const better_scroll= r =>require.ensure([],()=>r(require("../view/better-scroll/better_scroll.vue")),'better_scroll')
 
 Vue.use(Router)
 
@@ -51,6 +52,10 @@ export default new Router({
       path:'/es6',
       name:'es6',
       component:es6
+    },{
+      path:'/better_scroll',
+      name:'better_scroll',
+      component:better_scroll
     },{
 	  path: '*',
 	  redirect: '/'
