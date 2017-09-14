@@ -426,6 +426,25 @@
 			//console.log(Array.of(1,2));
 			//Array.of总是返回参数值组成的数组，如果没有参数，就返回一个空数组。
 			//4.数组实例的copyWithin()
+			//数组实例的CopyWithin方法，在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员）,然后返回当前数组，
+			//也就是说，使用这个方法，会修改当前数组。
+			//Array.prototype.copyWithin(target,start=0,end=this.length);
+			//它接受三个参数
+			//target(必须)：从该位置开始替换数据。
+			//start(可选)：从该位置开始读取数据默认为0。如果负值，表示倒数。
+			//end(可选)：到该位置前停止读取数据，默认等于数组长度。如果为负值，表示倒数
+			//这三个参数都应该是数值
+			//5.数组实例的find()和findIndex()
+			//数组实例的find方法，用于找出第一个复合条件的数组成员。它的参数是一个回调函数，所有数组成员一次执行该回调函数，
+			//直到找出第一个返回值为true的成员，然后返回该成员，如果没有符合条件的成员，则返回undefined
+			/*let arr=['唐贝贝是个小公主','唐贝贝是个小可爱','唐臭臭是个小流氓'];
+			arr.find((val,index)=>{
+				console.log(val);
+				console.log(index);
+				return val=='唐贝贝是个小可爱'
+			})*/
+			//find中函数的三个参数分别为 1.value 2.index 3.array原数组
+			//
 		}
 	}
 </script>
