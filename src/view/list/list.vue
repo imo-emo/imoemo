@@ -8,6 +8,7 @@
 			<li @click="router_push('standard')">前端结构规范</li>
 			<li @click="router_push('es6')">es6</li>
 			<li @click="router_push('better_scroll')">better-scroll</li>
+			<!-- <li @click="router_push('touch')">v-touch</li> -->
 		</ul>
 	</div>
 </template>
