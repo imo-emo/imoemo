@@ -1,6 +1,7 @@
 <template>
 	<div id="touch">
 		<button @click="btnClick">c-tap</button>
+		<button v-tap="{methods:btnClick}">c-tap</button>
 	</div>
 </template>
 <script>
