@@ -1,4 +1,4 @@
-import * as types from './types';
+import * as types from './module/types';  //定义的mutation
 
 export default{
 	increment:({commit}) =>{

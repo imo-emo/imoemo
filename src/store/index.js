@@ -3,11 +3,11 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex);
 
-import actions from './actions';
-import mutations from './mutations';
+import actions from './actions';  // actions
+import mutations from './module/mutations';  //模块state/mutation/getter
 export default new Vuex.Store({
 	actions,
 	modules:{
-		mutations
+		mutations,  //模块
 	}
 })
