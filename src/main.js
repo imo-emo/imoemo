@@ -19,4 +19,8 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
-console.log(Vue);
+router.beforeEach((to,from,next)=>{
+    console.log(to);
+    console.log(from);
+    next();    //跳转路由  如果不加next();则不跳转，如果跳转到固定路径,使用location.hash= 'hash名称'
+})
