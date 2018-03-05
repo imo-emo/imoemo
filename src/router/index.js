@@ -13,6 +13,7 @@ const es6 = r =>require.ensure([],()=>r(require("../view/es6/es6.vue")),'es6');
 const better_scroll= r =>require.ensure([],()=>r(require("../view/better-scroll/better_scroll.vue")),'better_scroll')
 const touch = r =>require.ensure([],()=>r(require("../view/touch/touch.vue")),'touch')
 const demo = r =>require.ensure([],()=>r(require("../view/demo/demo.vue")),'demo')
+const recursion = r =>require.ensure([],()=>r(require("../view/recursion/recursion.vue")),'recursion')  //多层级渲染
 
 Vue.use(Router)
 
@@ -66,6 +67,10 @@ export default new Router({
       path:'/demo',
       name:'demo',
       component: demo
+    },{
+      path:'/recursion',
+      name:'recursion',
+      component: recursion
     },{
 	  path: '*',
 	  redirect: '/'
