@@ -14,6 +14,7 @@ const better_scroll= r =>require.ensure([],()=>r(require("../view/better-scroll/
 const touch = r =>require.ensure([],()=>r(require("../view/touch/touch.vue")),'touch')
 const demo = r =>require.ensure([],()=>r(require("../view/demo/demo.vue")),'demo')
 const recursion = r =>require.ensure([],()=>r(require("../view/recursion/recursion.vue")),'recursion')  //多层级渲染
+const echarts = r =>require.ensure([],()=>r(require("../view/echarts/echarts.vue")));
 
 Vue.use(Router)
 
@@ -71,6 +72,10 @@ export default new Router({
       path:'/recursion',
       name:'recursion',
       component: recursion
+    },{
+      path:'/echarts',
+      name:'echarts',
+      component:echarts
     },{
 	  path: '*',
 	  redirect: '/'
