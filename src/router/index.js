@@ -15,6 +15,7 @@ const touch = r =>require.ensure([],()=>r(require("../view/touch/touch.vue")),'t
 const demo = r =>require.ensure([],()=>r(require("../view/demo/demo.vue")),'demo')
 const recursion = r =>require.ensure([],()=>r(require("../view/recursion/recursion.vue")),'recursion')  //多层级渲染
 const echarts = r =>require.ensure([],()=>r(require("../view/echarts/echarts.vue")));
+const draggable = r =>require.ensure([],()=>r(require("../view/draggable/draggable.vue")));  //vue拖拽模版
 
 Vue.use(Router)
 
@@ -76,6 +77,10 @@ export default new Router({
       path:'/echarts',
       name:'echarts',
       component:echarts
+    },{
+      path:'/draggable',
+      name:'draggable',
+      component:draggable
     },{
 	  path: '*',
 	  redirect: '/'

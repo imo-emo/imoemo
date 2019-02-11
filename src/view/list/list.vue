@@ -10,6 +10,7 @@
 			<li @click="router_push('better_scroll')">better-scroll</li>
 			<li @click="router_push('recursion')">多层级递归渲染</li>
 			<li @click="router_push('echarts')">map echarts</li>
+			<li @click="router_push('draggable')">拖拽控件</li>
 			<!-- <li @click="router_push('touch')">v-touch</li> -->
 		</ul>
 	</div>
